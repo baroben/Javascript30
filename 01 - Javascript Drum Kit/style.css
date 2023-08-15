@@ -3,3 +3,24 @@ body {
     padding: 0px;
     margin: 0px;
 }
+
+
+.keys {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+
+.key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px; 
+    background-color: lightgray;
+    margin: 10px;
+    border-radius: 10px;
+}
