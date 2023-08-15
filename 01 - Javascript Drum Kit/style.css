@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
 body {
     background: url(background.jpg);
     padding: 0px;
     margin: 0px;
 }
-
 
 .keys {
     display: flex;
@@ -20,7 +21,30 @@ body {
     justify-content: center;
     width: 70px;
     height: 70px; 
-    background-color: lightgray;
+    background-color: #D9EDF8;
     margin: 10px;
     border-radius: 10px;
+    font-size: 14px;
+    font-family:Caprasimo;
 }
+
+kbd {
+    margin: 5px;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 100%;
+    font-family: monospace, sans-serif;
+    vertical-align: baseline;
+    background: transparent;
+    border-color: #e6e6e6 #bebebe #bebebe #e6e6e6;
+    border-style: solid;
+    border-width: 1px 3px 4px;
+    padding: 0 5px;
+    background-color: #d2d2d2;
+    background-color: rgba(210, 210, 210, 0.9);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
