@@ -1,4 +1,5 @@
 const keys = document.querySelectorAll('.key')
+keys.forEach(element => element.addEventListener('transitionend', endTransition));
 
 keys.forEach((button) => {
     button.addEventListener('click', (e) => {
@@ -27,7 +28,6 @@ function switchOnLightKey(soundCode){
     key.classList.add("clicked");
 }
 
-keys.forEach(element => element.addEventListener('transitionend', e=>{
-    const key = e.currentTarget;
-    key.classList.remove("clicked");
-}))
+function endTransition() {
+    this.classList.remove("clicked");
+}
