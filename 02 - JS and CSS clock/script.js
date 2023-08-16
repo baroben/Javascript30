@@ -9,7 +9,7 @@ function updateClock(){
     const second = currentDate.getSeconds();
     
     const hourAngle = (hour%12)*360/12+minute*30/60;
-    const minuteAngle = minute*360/60;
+    const minuteAngle = minute*360/60+second*(1/10);
     const secondAngle = second*360/60;
 
     hourHand.style.transform = `translate(-50%, -100%) rotate(${hourAngle}deg)`;
