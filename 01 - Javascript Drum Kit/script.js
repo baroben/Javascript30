@@ -2,9 +2,8 @@ const keys = document.querySelectorAll('.key')
 
 keys.forEach((button) => {
     button.addEventListener('click', (e) => {
-        const keyPressed = e.currentTarget;
-        const dataKey = keyPressed.dataset.key;
-        playSound(e.currentTarget.dataset.key);
+        const dataKey = e.currentTarget.dataset.key
+        playSound(dataKey);
         switchOnLightKey(dataKey);
     })
 })
@@ -48,20 +47,17 @@ document.addEventListener("keydown",(e)=>{
 });
 
 function playSound(soundCode){
-    console.log(soundCode);
-    audio = document.querySelector(`audio[data-key="${soundCode}"]`);
+    let audio = document.querySelector(`audio[data-key="${soundCode}"]`);
     if(!audio) return;
     audio.currentTime = 0;
     audio.play();
 }
 
 function switchOnLightKey(soundCode){
-    for(const key of keys){
-        if(key.dataset.key == soundCode){
-            key.classList.add("clicked");
-            setTimeout(() => {
-                key.classList.remove("clicked");
-            },100);
-        }
-    }
+    let key = document.querySelector(`div[data-key="${soundCode}"]`);
+    if(!key) return;
+    key.classList.add("clicked");
+    setTimeout(() => {
+        key.classList.remove("clicked");
+    },100);
 }
