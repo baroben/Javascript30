@@ -1,6 +1,7 @@
 const keys = document.querySelectorAll('.key')
 keys.forEach(element => element.addEventListener('transitionend', endTransition));
 
+
 keys.forEach((button) => {
     button.addEventListener('click', (e) => {
         const dataKey = e.currentTarget.dataset.key
