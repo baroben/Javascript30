@@ -25,7 +25,9 @@ function switchOnLightKey(soundCode){
     let key = document.querySelector(`div[data-key="${soundCode}"]`);
     if(!key) return;
     key.classList.add("clicked");
-    setTimeout(() => {
-        key.classList.remove("clicked");
-    },100);
 }
+
+keys.forEach(element => element.addEventListener('transitionend', e=>{
+    const key = e.currentTarget;
+    key.classList.remove("clicked");
+}))
