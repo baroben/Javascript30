@@ -1,3 +1,8 @@
 J'ai débuté avec le fichier html fourni. 
 J'ai commencé de 0 pour le CSS et le JS.
 La batterie fonctionne en cliquant ou en utilisant les touches indiquées.
+
+Corrections apportées : 
+-Remplacement du timeout pour reverse l'animation sur les keys avec un eventlistener sur transitionend
+-Pour trouver l'audio qu'il fallait jouer, je les parcourais tous avec une boucle for et je regardait l'id. Il suffisait enfaite 
+de cibler directement l'audio concerné avec un query contenant directemnt l'identifiant de l'audio.
