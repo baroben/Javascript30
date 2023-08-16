@@ -1,2 +1,3 @@
 J'ai débuté avec le fichier html fourni. 
 J'ai commencé de 0 pour le CSS et le JS.
+La batterie fonctionne en cliquant ou en utilisant les touches indiquées.
