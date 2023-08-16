@@ -1,11 +1,10 @@
-const audios = document.querySelectorAll('audio')
 const keys = document.querySelectorAll('.key')
 
 keys.forEach((button) => {
     button.addEventListener('click', (e) => {
         const keyPressed = e.currentTarget;
         const dataKey = keyPressed.dataset.key;
-        playSound(dataKey);
+        playSound(e.currentTarget.dataset.key);
         switchOnLightKey(dataKey);
     })
 })
@@ -49,13 +48,11 @@ document.addEventListener("keydown",(e)=>{
 });
 
 function playSound(soundCode){
-    for(const audio of audios){
-        if(audio.dataset.key == soundCode){
-            audio.currentTime = 0;
-            audio.play();
-            break;
-        }
-    }
+    console.log(soundCode);
+    audio = document.querySelector(`audio[data-key="${soundCode}"]`);
+    if(!audio) return;
+    audio.currentTime = 0;
+    audio.play();
 }
 
 function switchOnLightKey(soundCode){
