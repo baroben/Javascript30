@@ -47,4 +47,10 @@ kbd {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-  }
+}
+
+.clicked {
+  transition: 0.05s all;
+  box-shadow:  0px 0px 10px 10px rgba(255, 255, 0, 0.8);
+}
+
