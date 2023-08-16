@@ -6,10 +6,7 @@ keys.forEach((button) => {
         const keyPressed = e.currentTarget;
         const dataKey = keyPressed.dataset.key;
         playSound(dataKey);
-        keyPressed.classList.add("clicked");
-        setTimeout(() => {
-            keyPressed.classList.remove("clicked");
-        },100);
+        switchOnLightKey(dataKey);
     })
 })
 
@@ -48,14 +45,26 @@ document.addEventListener("keydown",(e)=>{
             break;
     }
     playSound(audioKey);
+    switchOnLightKey(audioKey);
 });
 
-function playSound(key){
+function playSound(soundCode){
     for(const audio of audios){
-        if(audio.dataset.key == key){
+        if(audio.dataset.key == soundCode){
             audio.currentTime = 0;
             audio.play();
             break;
+        }
+    }
+}
+
+function switchOnLightKey(soundCode){
+    for(const key of keys){
+        if(key.dataset.key == soundCode){
+            key.classList.add("clicked");
+            setTimeout(() => {
+                key.classList.remove("clicked");
+            },100);
         }
     }
 }
