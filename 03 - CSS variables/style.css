@@ -1,7 +1,7 @@
 :root{
-    --color-value: #ffc93c;
-    --spacing-value: 10px;
-    --blur-value: 10px;
+    --color: #ffc93c;
+    --spacing: 10px;
+    --blur: 10px;
 }
 
 body {
@@ -39,5 +39,5 @@ input {
 }
 
 img {
-    box-shadow: var(--spacing-value) var(--spacing-value) var(--blur-value) var(--color-value);
+    box-shadow: var(--spacing) var(--spacing) var(--blur) var(--color);
 }

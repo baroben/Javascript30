@@ -1,18 +1,9 @@
 const root = document.documentElement;
-const spacingRange = document.querySelector('#spacing-range');
-const blurRange = document.querySelector('#blur-range');
-const colorPicker = document.querySelector('#color-picker');
+const inputs = document.querySelectorAll("input");
 
-spacingRange.addEventListener('input', () => {
-    root.style.setProperty('--spacing-value', `${spacingRange.value}px`);
-});
+function refreshImg(){
+    const sizing = this.dataset.sizing != undefined ? this.dataset.sizing : "";
+    root.style.setProperty(`--${this.name}`, `${this.value}` + sizing);
+}
 
-blurRange.addEventListener('input', () => {
-    root.style.setProperty('--blur-value', `${blurRange.value}px`);
-});
-
-colorPicker.addEventListener('input', () => {
-    root.style.setProperty('--color-value', `${colorPicker.value}`);
-});
-
-
+inputs.forEach(input => input.addEventListener('input',(refreshImg)));

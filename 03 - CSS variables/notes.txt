@@ -1,0 +1,4 @@
+J'ai débuté de zéro.
+Changements apportés : 
+- j'avais fait un event listener pour chaque input. C'était plus rapide d'un faire un seul pour tous les inputs puis de récupérer les informations de l'input concerné avec this.
+- Il faut donc pour cela que le nom dans la balise input soit le même que la variable en css
