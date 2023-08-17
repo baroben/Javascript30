@@ -1,4 +1,43 @@
+:root{
+    --color-value: #ffc93c;
+    --spacing-value: 10px;
+    --blur-value: 10px;
+}
+
 body {
     margin: 0px;
     padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #0e0c25;
+    color: white;
+}
+
+.parameters {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 40px 0px;
+}
+
+h1{
+    margin: 0px;
+}
+
+label{
+    margin-left: 10px;
+}
+
+input {
+    margin-right: 10px;
+}
+
+.highlight {
+    color: var(--color-value);
+}
+
+img {
+    box-shadow: var(--spacing-value) var(--spacing-value) var(--blur-value) var(--color-value);
 }
