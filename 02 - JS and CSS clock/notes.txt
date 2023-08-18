@@ -1,1 +1,5 @@
 Je pars de zéro pour ce projet.
+
+A retenir :
+- Utiliser transition en CSS pour avoir de belles animations
+- cubic bezier est une fonction qui permet d'avoir des animations plus smooths
