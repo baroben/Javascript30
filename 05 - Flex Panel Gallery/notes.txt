@@ -1,0 +1,3 @@
+flex basis permet que tous les panneaux aient la meme taille, peut importe la largeur de leur texte.
+bien noter .panel.expanded
+penser à l'event transitioned
