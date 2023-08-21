@@ -9,19 +9,13 @@
 
 </head>
 <body>
-    <label for="user-input">Enter the city <i class="em em-point_down" aria-role="presentation" aria-label="WHITE DOWN POINTING BACKHAND INDEX"></i></label>
-    <div class="search-container">
-        <input type="text" name="user-input" id="user-input">
-        <div class="dropdown">
-            <select id="dropdown-list">
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-                <!-- Ajoutez autant d'options que nécessaire -->
-            </select>
-        </div>
-        
-    </div>
+    <form class="search-form">
+        <input type="text" class="search" placeholder="City or State">
+        <ul class="suggestions">
+          <li>Filter for a city</li>
+          <li>or a state</li>
+        </ul>
+      </form>
     
 
     <script src="script.js"></script>
