@@ -16,9 +16,18 @@ fetch(endpoint)
   .catch(error => console.error('Une erreur s\'est produite :', error));
 
 const input = document.querySelector(".search");
+const myList = document.querySelector('.suggestions');
 
 input.addEventListener('input', event => {
     const inputValue = event.target.value;
-    
+    const filteredCities = jsonData.filter(row=>row.city.includes(inputValue));
+    while (myList.firstChild) {
+        myList.removeChild(myList.firstChild);
+    }
+    filteredCities.forEach(element => {
+        const newElement = document.createElement('li');
+        newElement.textContent = element.city;
+        myList.appendChild(newElement);
+    });
 })
 
