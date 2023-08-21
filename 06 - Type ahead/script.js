@@ -15,5 +15,10 @@ fetch(endpoint)
   })
   .catch(error => console.error('Une erreur s\'est produite :', error));
 
+const input = document.querySelector(".search");
 
+input.addEventListener('input', event => {
+    const inputValue = event.target.value;
+    
+})
 
