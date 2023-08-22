@@ -20,11 +20,15 @@ const suggestions = document.querySelector('.suggestions');
 
 input.addEventListener('input', event => {
     const inputValue = event.target.value;
+    const regex = new RegExp(inputValue,'gi');
     const filteredCities = jsonData.filter(row => {
-      return row.city.includes(inputValue) || row.state.includes(inputValue);
+      return row.city.match(regex) || row.state.match(regex);
     });
     const html = filteredCities.map((town) =>{
-      return `<li>${town.city}, ${town.state}</li>`;
+      const city = town.city.replace(regex, `<span class='hl'>${inputValue}</span>`);
+      const state = town.state.replace(regex, `<span class='hl'>${inputValue}</span>`);
+
+      return `<li>${city}, ${state}</li>`;
     }).join('');
     suggestions.innerHTML = html;
 })

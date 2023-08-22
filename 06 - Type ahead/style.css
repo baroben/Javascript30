@@ -18,6 +18,11 @@ input {
   text-align: center;
 }
 
+.hl {
+  background-color: rgba(20, 30, 70, 0.2);
+
+}
+
 .search-form {
   margin: 50px auto;
   max-width: 400px;
