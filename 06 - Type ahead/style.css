@@ -14,14 +14,18 @@ ul{
 input {
   margin: 0px;
   padding: 0px;
-  width: 100%;
   text-align: center;
 }
 
 .search-form {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  width: 30%;
-  transform: translate(-50%,-50%);
+  margin: 50px auto;
+  max-width: 400px;
+}
+
+li {
+  padding: 2px 5px;
+}
+
+.suggestions{
+
 }
