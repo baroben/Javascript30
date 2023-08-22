@@ -1,0 +1,2 @@
+En html, on ne dessine pas directement sur le canvas mais sur le "context".
+Il faut donc le récupérer pour pouvoir dessiner.
