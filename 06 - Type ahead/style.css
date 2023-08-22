@@ -20,7 +20,9 @@ input {
 
 .hl {
   background-color: rgba(20, 30, 70, 0.2);
+}
 
+.population{
 }
 
 .search-form {
@@ -30,6 +32,9 @@ input {
 
 li {
   padding: 2px 5px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
 }
 
 .suggestions{

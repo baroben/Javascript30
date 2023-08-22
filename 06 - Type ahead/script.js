@@ -28,7 +28,7 @@ input.addEventListener('input', event => {
       const city = town.city.replace(regex, `<span class='hl'>${inputValue}</span>`);
       const state = town.state.replace(regex, `<span class='hl'>${inputValue}</span>`);
 
-      return `<li>${city}, ${state}</li>`;
+      return `<li><span class="name">${city}, ${state}</span><span class="population">${town.population}</span></li>`;
     }).join('');
     suggestions.innerHTML = html;
 })
