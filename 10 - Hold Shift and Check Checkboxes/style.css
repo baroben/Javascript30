@@ -1,4 +1,41 @@
-body {
+html {
     margin: 0px;
     padding: 0px;
+    background-color:#d6d776;
 }
+
+.inbox {
+    max-width: 400px;
+    background-color: white;
+    margin: 50px auto;
+    box-shadow: #c0c060 10px 10px 0px;
+    border-radius: 10px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child{
+    border-bottom:0px;
+}
+
+input:checked + p { 
+    text-decoration:line-through;
+}
+
+input[type="checkbox"]{
+    margin:20px;
+}
+
+p {
+    margin:0;
+    padding: 20px;
+    border-left: solid #D1E2FF;
+    flex:1;
+    font-family: Helvetica;
+    font-weight: 100;
+}
+

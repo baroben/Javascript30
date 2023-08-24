@@ -1,0 +1,1 @@
+Le selecteur "+" en CSS permet de selectionner l'élément direct.
