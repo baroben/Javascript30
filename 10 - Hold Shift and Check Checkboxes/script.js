@@ -1,10 +1,26 @@
-let shift = false;
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-document.addEventListener("keydown",(e)=>{
-    if(e.key == 'Shift')shift = true;
-});
+let lastChecked;
 
-document.addEventListener("keyup",(e)=>{
-    if(e.key == 'Shift')shift = false;
-});
+function setCheck(e){
+    let inBetween = false;
+
+    if(e.shiftKey && this.checked==true){
+        checkboxes.forEach(box=>{
+            if(box===lastChecked || box===this){
+                inBetween=!inBetween;
+            }
+
+            if(inBetween){
+                box.checked = true;
+            }
+        })    
+    }
+
+    lastChecked = this; 
+}
+
+checkboxes.forEach(box=>box.addEventListener('click',setCheck));
+
+
 
