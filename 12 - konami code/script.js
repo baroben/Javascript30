@@ -10,5 +10,6 @@ function handleInput(e){
     console.log(keyCombination);
     if(cheatCode == keyCombination.join('')){
         console.log('Cheat code activated !');
+        cornify_add();
     }
 }
