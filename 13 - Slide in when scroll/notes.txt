@@ -1,0 +1,2 @@
+debounce() permet de lancer la fonction qu'après un délai
+float permet de faire flotter les élément dans une division. On peut le faire flotter à gauche ou a droite.
