@@ -1,0 +1,9 @@
+ATTENTION : 
+Variable : passage par valeur
+Array : passage par référence
+Objets : 
+    Copie superficielle :
+        on copie l'objet mais les objets imbriqués sont des références !
+    Copie profonde :
+        On copie l'objet ainsi que tous les objets imbriqués
+
