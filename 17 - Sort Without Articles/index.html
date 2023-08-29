@@ -51,6 +51,16 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper',
 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
 
+console.log(bands.sort((a,b) => {
+  return removeArticle(a).join(" ").localeCompare(removeArticle(b).join(" ")) ;
+}));
+
+function removeArticle(a){
+  const words = a.split(" ");
+  const banningWords = ["a","an","the"];
+  return words.filter(word=>!banningWords.includes(word.toLowerCase()));
+}
+
 </script>
 
 </body>
