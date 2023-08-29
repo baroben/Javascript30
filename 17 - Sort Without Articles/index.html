@@ -51,16 +51,19 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper',
 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
 
-console.log(bands.sort((a,b) => {
-  return removeArticle(a).join(" ").localeCompare(removeArticle(b).join(" ")) ;
-}));
+const orderedBands = bands.sort((a,b) => {
+  return strip(a) < strip(b) ? -1 : 1;
+});
 
-function removeArticle(a){
-  const words = a.split(" ");
-  const banningWords = ["a","an","the"];
-  return words.filter(word=>!banningWords.includes(word.toLowerCase()));
+function strip(a){
+  return a.replace(/^(a |an |the)/i,'').trim();
 }
 
+const bandList = document.getElementById('bands');
+
+let html = ""; 
+orderedBands.forEach(band=>{html += `<li>${band}</li>`;});
+bandList.innerHTML = html; 
 </script>
 
 </body>
